@@ -60,3 +60,10 @@ main div{margin-right: 80px;
         height: 2px;
         width: 100%;
         }
+        p {
+            /* float: right; */
+            /* display: inline-block; */
+            text-align: right;
+            margin-top: -145px;
+            margin-bottom: 174px;
+        }
