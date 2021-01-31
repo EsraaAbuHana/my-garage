@@ -51,3 +51,12 @@ main div{margin-right: 80px;
             margin-bottom: 20px;
          
         }
+        img{
+            height: 200px;
+            width: 200px;
+            float: left;
+        }
+        br{color: #a3a3a3;
+        height: 2px;
+        width: 100%;
+        }

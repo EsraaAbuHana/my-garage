@@ -11,35 +11,37 @@ function Garage (name,category,model){
     this.name=name;
     this.category=category;
     this.model=model;
-    this.url='img/'+category+'.png';
+    this.url='../img/'+category+'.png';
 arrayOfGarage.push(this);
 
 }
 Garage.prototype.renderCar=function(){
     var carImg=document.createElement('img');
+    carImg.setAttribute('src',this.url);
     var carName=document.createElement('p');
     var carYear=document.createElement('p');
-//    carImg.textContent=document.setItem('src')+this.url;
-// carImg.setAttribute('src', url);
 carName.textContent=`Car name: ${this.name}`;
 carYear.textContent=`Model Year: ${this.model}`;
-
-garageRender.appendChild(carImg)
+var brakeLine = document.createElement('br');
+garageRender.appendChild(carImg);
 garageRender.appendChild(carName);
 garageRender.appendChild(carYear);
+garageRender.appendChild(brakeLine);
 
 }
 function renderGarageCars() {
     for (let index = 0; index < arrayOfGarage.length; index++) {
-        
         var carImg=document.createElement('img');
-    var carName=document.createElement('p');
-    var carYear=document.createElement('p');
-carName.textContent=`Car name: ${arrayOfGarage[index].name}`;
-carYear.textContent=`Model Year: ${arrayOfGarage[index].model}`;
-
-garageRender.appendChild(carName);
-garageRender.appendChild(carYear);
+        carImg.setAttribute('src',arrayOfGarage[index].url);
+        var carName=document.createElement('p');
+        var carYear=document.createElement('p');
+    carName.textContent=`Car name: ${arrayOfGarage[index].name}`;
+    carYear.textContent=`Model Year: ${arrayOfGarage[index].model}`;
+    var brakeLine = document.createElement('br');
+    garageRender.appendChild(carImg);
+    garageRender.appendChild(carName);
+    garageRender.appendChild(carYear);
+    garageRender.appendChild(brakeLine);
     }
     
 }
