@@ -11,7 +11,7 @@ function Garage (name,category,model){
     this.name=name;
     this.category=category;
     this.model=model;
-    this.url='../img/'+category+'.png';
+    this.url='..//img/'+category+'.png';
 arrayOfGarage.push(this);
 
 }
